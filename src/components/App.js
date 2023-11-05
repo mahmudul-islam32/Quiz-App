@@ -91,7 +91,7 @@ export default function App() {
   const maxPoints = questions.reduce((prev, curr) => prev + curr.points, 0);
 
   useEffect(function () {
-    fetch("http://localhost:9000/questions")
+    fetch("https://quiz-api-xnh3.onrender.com/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
